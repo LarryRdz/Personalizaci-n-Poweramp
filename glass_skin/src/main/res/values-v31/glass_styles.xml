@@ -5,6 +5,6 @@
 	     "cross-window blur" activo, si no, Android lo ignora sin fallar) -->
 	<style name="GlassDialogForcedStyle" parent="com.maxmpz.audioplayer:style/Default_BaseDialogForcedStyle">
 		<item name="android:windowBlurBehindEnabled">true</item>
-		<item name="android:windowBlurBehindRadius">28dp</item>
+		<item name="android:windowBlurBehindRadius">32dp</item>
 	</style>
 </resources>

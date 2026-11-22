@@ -8,7 +8,17 @@ Solo cambia:
 2. **Popups, menús flotantes y diálogos**: fondo oscuro translúcido (`colorBgPrimary`).
    En Android 12+ los diálogos además desenfocan de verdad el fondo (`windowBlurBehind`).
 
-Opciones en Poweramp → Ajustes → Tema → Glass Dark: intensidad (Ligero/Medio/Denso) y desactivar el desenfoque de diálogos.
+Variantes (cada una es un skin propio en Poweramp → Ajustes → Tema):
+- **Glass Dark**: oscuro plano al 92%, sin bordes.
+- **Glass Dark · Translúcido**: 82%.
+- **Glass Dark · AMOLED**: negro puro.
+- **Glass Dark · Contorno**: como Glass Dark con una línea muy fina.
+
+## Por qué no hay opciones dentro del skin
+Poweramp (build 1026+) trata como **no verificado** a todo skin cuyo certificado no esté en su lista blanca:
+las opciones solo viven en memoria (no se guardan), no hay página de opciones y el skin se deselecciona
+a las 48 h. Para verificarlo hay que firmar con una clave de release fija y enviar el paquete + huella SHA-256
+al desarrollador de Poweramp (ver `glass_skin/readme.md`, sección *Skin Verification*).
 
 ## Limitación (motor de skins)
 El motor de skins de Poweramp **no expone desenfoque en tiempo real detrás de una vista** (backdrop blur).

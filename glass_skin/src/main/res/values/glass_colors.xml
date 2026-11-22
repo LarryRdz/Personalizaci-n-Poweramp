@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<!-- Cristal oscuro (estilo Nothing OS). Formato #AARRGGBB -->
-	<color name="glass_surface">#B8121212</color>        <!-- ~72% opaco: popups, menus, dialogos -->
-	<color name="glass_navbar">#A6121212</color>         <!-- ~65% opaco: isla inferior / miniplayer -->
-	<color name="glass_stroke">#40FFFFFF</color>         <!-- borde fino de alto contraste -->
-	<color name="glass_highlight_top">#1AFFFFFF</color>  <!-- brillo superior del cristal -->
-	<color name="glass_highlight_end">#00FFFFFF</color>
+	<!-- Formato #AARRGGBB. Opacidad alta: el motor de Poweramp no permite desenfocar lo que hay
+	     detras de la isla, asi que con menos opacidad el texto de la lista se lee a traves (feo). -->
 
-	<!-- Variantes de intensidad (opcion del skin) -->
-	<color name="glass_surface_light">#8C121212</color>
-	<color name="glass_navbar_light">#73121212</color>
-	<color name="glass_surface_dense">#E0121212</color>
-	<color name="glass_navbar_dense">#D1121212</color>
+	<!-- Glass Dark (por defecto) -->
+	<color name="gd_navbar">#EB121212</color>   <!-- 92% -->
+	<color name="gd_surface">#F0161616</color>  <!-- 94%: menus, popups, dialogos -->
+
+	<!-- Translucido -->
+	<color name="gt_navbar">#D1121212</color>   <!-- 82% -->
+	<color name="gt_surface">#E0161616</color>  <!-- 88% -->
+
+	<!-- AMOLED -->
+	<color name="ga_navbar">#F5000000</color>   <!-- 96% negro puro -->
+	<color name="ga_surface">#F7050505</color>
+
+	<!-- Linea fina opcional (variante "Contorno"), sin brillos ni biseles -->
+	<color name="glass_hairline">#1AFFFFFF</color>
 </resources>

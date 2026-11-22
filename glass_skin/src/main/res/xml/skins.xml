@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Misma estructura que poweramp_skin_sample. Solo cambia el skin registrado (nombre/estilo).
-     verification="false": el APK se firma con tu propia clave, no hace falta verificacion. -->
+<!-- Cada variante es un skin propio en el selector de Poweramp, en lugar de opciones:
+     Poweramp no guarda las opciones de skins no verificados (ver README). -->
 <skins targetBuild="1003" verification="false">
 	<skin
 		name="@string/skin_glass_dark"
 		author="@string/skin_author"
-		description="@string/skin_glass_dark_description"
+		description="@string/skin_desc_dark"
 		style="@style/GlassDark"
-		forceGlobalOptions="true"
 		allowNewPadding="true"
-	>
-		<multiSwitch
-			key="glass_intensity"
-			name="@string/skin_glass_intensity"
-			summary="@string/skin_glass_intensity_s"
-			defaultValue=""
-		>
-			<option name="@string/skin_glass_light" overlapStyle="@style/GlassDark_Light"/>
-			<option name="@string/skin_glass_medium" overlapStyle=""/>
-			<option name="@string/skin_glass_dense" overlapStyle="@style/GlassDark_Dense"/>
-		</multiSwitch>
-
-		<option
-			key="no_dialog_blur"
-			name="@string/skin_no_dialog_blur"
-			summary="@string/skin_summary_no_dialog_blur"
-			overlapStyle="@style/GlassDark_NoDialogBlur"
-			checkedByDefault="false"
-		/>
-	</skin>
+	/>
+	<skin
+		name="@string/skin_glass_translucent"
+		author="@string/skin_author"
+		description="@string/skin_desc_translucent"
+		style="@style/GlassDark_Translucent"
+		allowNewPadding="true"
+	/>
+	<skin
+		name="@string/skin_glass_amoled"
+		author="@string/skin_author"
+		description="@string/skin_desc_amoled"
+		style="@style/GlassDark_Amoled"
+		allowNewPadding="true"
+	/>
+	<skin
+		name="@string/skin_glass_outline"
+		author="@string/skin_author"
+		description="@string/skin_desc_outline"
+		style="@style/GlassDark_Outline"
+		allowNewPadding="true"
+	/>
 </skins>

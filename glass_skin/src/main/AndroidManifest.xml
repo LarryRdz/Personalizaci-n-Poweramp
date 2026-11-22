@@ -35,15 +35,6 @@
             </intent-filter>
         </activity>
 
-	    <!-- This is optional activity which will be started for the skins which want verification -->
-	    <activity android:name=".SkinVerificationActivity"
-		    android:exported="true"
-		    >
-		    <intent-filter>
-			    <!-- This is optional action which will be invoked for the skins which want verification -->
-			    <action android:name="com.maxmpz.audioplayer.SKIN_VERIFICATION" />
-		    </intent-filter>
-	    </activity>
     </application>
 
 </manifest>
