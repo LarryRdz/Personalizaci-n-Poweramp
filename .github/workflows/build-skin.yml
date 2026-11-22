@@ -13,10 +13,10 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-      - uses: android-actions/setup-android@v3
       - name: Build APK
         run: |
           chmod +x gradlew
+          echo "sdk.dir=$ANDROID_HOME" > local.properties
           ./gradlew :glass_skin:assembleDebug --stacktrace
       - uses: actions/upload-artifact@v4
         with:
