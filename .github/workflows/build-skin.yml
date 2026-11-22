@@ -2,7 +2,12 @@ name: Build Glass Dark skin APK
 
 on:
   push:
+    paths-ignore:
+      - 'apk/**'
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -18,7 +23,13 @@ jobs:
           chmod +x gradlew
           echo "sdk.dir=$ANDROID_HOME" > local.properties
           ./gradlew :glass_skin:assembleDebug --stacktrace
-      - uses: actions/upload-artifact@v4
-        with:
-          name: poweramp-glass-dark-apk
-          path: glass_skin/build/outputs/apk/debug/*.apk
+      # Artifact storage quota may be full, so commit the APK to the branch instead
+      - name: Commit APK to branch
+        run: |
+          mkdir -p apk
+          cp glass_skin/build/outputs/apk/debug/*.apk apk/PowerampGlassDark.apk
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add apk/PowerampGlassDark.apk
+          git commit -m "Add built APK [skip ci]" || exit 0
+          git push
