@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ResourceCycle, NewApi">
+
+	<!-- Glass Dark: tema oscuro nativo de Poweramp (ActivityTheme_Black) intacto.
+	     Solo se cambian las superficies grises solidas:
+	     - colorBgNavbar  -> isla inferior (navbar / miniplayer), drawable navbar_bg
+	     - colorBgPrimary -> popups, menus flotantes y dialogos (default_dialog_bg_less_rounded,
+	                         alpha_popup_button_layout_*, item_bg nivel POPUP, etc.) -->
+	<style name="GlassDark" parent="com.maxmpz.audioplayer:style/ActivityTheme_Black">
+		<item name="com.maxmpz.audioplayer:colorBgPrimary">@color/glass_surface</item>
+		<item name="com.maxmpz.audioplayer:colorBgNavbar">@color/glass_navbar</item>
+
+		<!-- Isla inferior con borde y brillo. Sombra desactivada: con fondo translucido
+		     la sombra de elevation se ve "a traves" del cristal como una mancha -->
+		<item name="com.maxmpz.audioplayer:navbar_elevation">0dp</item>
+		<item name="com.maxmpz.audioplayer:Navbar">@style/GlassNavbar</item>
+		<item name="com.maxmpz.audioplayer:Navbar_scene_navbar_1line_sheet">@style/GlassNavbar_scene_navbar_1line_sheet</item>
+		<item name="com.maxmpz.audioplayer:Navbar_scene_navbar_2lines">@style/GlassNavbar_scene_navbar_2lines</item>
+
+		<!-- Dialogos: en Android 12+ se desenfoca de verdad lo que hay detras (ver values-v31) -->
+		<item name="com.maxmpz.audioplayer:DialogForcedStyle">@style/GlassDialogForcedStyle</item>
+	</style>
+
+	<style name="GlassNavbar" parent="com.maxmpz.audioplayer:style/Navbar">
+		<item name="android:background">@drawable/glass_navbar_bg</item>
+		<item name="android:elevation">0dp</item>
+		<item name="com.maxmpz.audioplayer:applyViewParams">true</item>
+	</style>
+	<style name="GlassNavbar_scene_navbar_1line_sheet" parent="com.maxmpz.audioplayer:style/Navbar_scene_navbar_1line_sheet">
+		<item name="android:background">@drawable/glass_navbar_bg</item>
+		<item name="android:elevation">0dp</item>
+		<item name="com.maxmpz.audioplayer:applyViewParams">true</item>
+	</style>
+	<style name="GlassNavbar_scene_navbar_2lines" parent="com.maxmpz.audioplayer:style/Navbar_scene_navbar_2lines">
+		<item name="android:background">@drawable/glass_navbar_bg</item>
+		<item name="android:elevation">0dp</item>
+		<item name="com.maxmpz.audioplayer:applyViewParams">true</item>
+	</style>
+
+	<!-- Android < 12: sin desenfoque de ventana (no soportado por el sistema) -->
+	<style name="GlassDialogForcedStyle" parent="com.maxmpz.audioplayer:style/Default_BaseDialogForcedStyle">
+	</style>
+
+	<!-- Opcion: intensidad del cristal -->
+	<style name="GlassDark_Light">
+		<item name="com.maxmpz.audioplayer:colorBgPrimary">@color/glass_surface_light</item>
+		<item name="com.maxmpz.audioplayer:colorBgNavbar">@color/glass_navbar_light</item>
+	</style>
+	<style name="GlassDark_Dense">
+		<item name="com.maxmpz.audioplayer:colorBgPrimary">@color/glass_surface_dense</item>
+		<item name="com.maxmpz.audioplayer:colorBgNavbar">@color/glass_navbar_dense</item>
+	</style>
+
+	<!-- Opcion: desactivar desenfoque tras dialogos -->
+	<style name="GlassDark_NoDialogBlur">
+		<item name="com.maxmpz.audioplayer:DialogForcedStyle">@com.maxmpz.audioplayer:style/Default_BaseDialogForcedStyle</item>
+	</style>
+</resources>

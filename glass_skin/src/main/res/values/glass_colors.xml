@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Cristal oscuro (estilo Nothing OS). Formato #AARRGGBB -->
+	<color name="glass_surface">#B8121212</color>        <!-- ~72% opaco: popups, menus, dialogos -->
+	<color name="glass_navbar">#A6121212</color>         <!-- ~65% opaco: isla inferior / miniplayer -->
+	<color name="glass_stroke">#40FFFFFF</color>         <!-- borde fino de alto contraste -->
+	<color name="glass_highlight_top">#1AFFFFFF</color>  <!-- brillo superior del cristal -->
+	<color name="glass_highlight_end">#00FFFFFF</color>
+
+	<!-- Variantes de intensidad (opcion del skin) -->
+	<color name="glass_surface_light">#8C121212</color>
+	<color name="glass_navbar_light">#73121212</color>
+	<color name="glass_surface_dense">#E0121212</color>
+	<color name="glass_navbar_dense">#D1121212</color>
+</resources>

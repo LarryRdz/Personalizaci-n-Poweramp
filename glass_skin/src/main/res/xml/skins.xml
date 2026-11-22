@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Misma estructura que poweramp_skin_sample. Solo cambia el skin registrado (nombre/estilo).
+     verification="false": el APK se firma con tu propia clave, no hace falta verificacion. -->
+<skins targetBuild="1003" verification="false">
+	<skin
+		name="@string/skin_glass_dark"
+		author="@string/skin_author"
+		description="@string/skin_glass_dark_description"
+		style="@style/GlassDark"
+		forceGlobalOptions="true"
+		allowNewPadding="true"
+	>
+		<multiSwitch
+			key="glass_intensity"
+			name="@string/skin_glass_intensity"
+			summary="@string/skin_glass_intensity_s"
+			defaultValue=""
+		>
+			<option name="@string/skin_glass_light" overlapStyle="@style/GlassDark_Light"/>
+			<option name="@string/skin_glass_medium" overlapStyle=""/>
+			<option name="@string/skin_glass_dense" overlapStyle="@style/GlassDark_Dense"/>
+		</multiSwitch>
+
+		<option
+			key="no_dialog_blur"
+			name="@string/skin_no_dialog_blur"
+			summary="@string/skin_summary_no_dialog_blur"
+			overlapStyle="@style/GlassDark_NoDialogBlur"
+			checkedByDefault="false"
+		/>
+	</skin>
+</skins>

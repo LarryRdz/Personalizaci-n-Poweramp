@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Android 12+: desenfoque REAL del contenido de detras al abrir un dialogo
+	     (blur-behind de ventana del sistema; requiere que el dispositivo tenga
+	     "cross-window blur" activo, si no, Android lo ignora sin fallar) -->
+	<style name="GlassDialogForcedStyle" parent="com.maxmpz.audioplayer:style/Default_BaseDialogForcedStyle">
+		<item name="android:windowBlurBehindEnabled">true</item>
+		<item name="android:windowBlurBehindRadius">28dp</item>
+	</style>
+</resources>

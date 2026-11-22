@@ -1,0 +1,68 @@
+plugins {
+    alias(libs.plugins.agp.application)
+    alias(libs.plugins.kotlin.android)
+}
+
+android {
+    compileSdk COMPILE_SDK
+    namespace "com.poweramp.v3.sampleskin"
+
+    defaultConfig {
+        applicationId "com.larryrdz.poweramp.glassskin"
+        minSdk MIN_SDK
+        targetSdk TARGET_SDK
+        versionCode 1
+        versionName "1.0"
+    }
+
+    // Important for skin verification. As Poweramp will check your release signature, debug builds signed with debug key won't be
+    // verified (e.g., during the development). Instead, force gradle to use release signature for the debug builds
+    //signingConfigs {
+    //    release {
+    //       ... here you have your normal release signature setup ...
+    //    }
+    //}
+    //buildTypes {
+    //  debug {
+    //        signingConfig signingConfigs.release // Here you force release signature for the debug builds
+    //  }
+    //}
+
+    compileOptions {
+        sourceCompatibility = JAVA_SOURCE_COMPATIBILITY
+        targetCompatibility = JAVA_TARGET_COMPATIBILITY
+    }
+    lint {
+        disable 'ResAuto', 'MissingTranslation', 'OnClick', 'ExtraTranslation'
+    }
+
+    androidResources {
+        def localProps = new Properties()
+        def localPropsFile = rootProject.file("local.properties")
+        if(localPropsFile.exists()) localProps.load(localPropsFile.newDataInputStream())
+        def paResources = localProps['poweramp.apk'] ?: "Poweramp-build-1037-resources.zip"
+        println "Using $paResources PA resources"
+
+        def params = []
+
+        params += ["--emit-ids", "${projectDir}/stable-ids.txt", "--package-id", "0x80",  "-I", "${projectDir}/../${paResources}"]
+
+        if(project.file("stable-ids.txt").exists()) {
+            println "Got stable-ids OK"
+            params += ["--stable-ids", "${projectDir}/stable-ids.txt"]
+        } else {
+            println "WARNING: no stable-ids.txt specified"
+        }
+
+        additionalParameters = params
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+}
+
+dependencies {
+    implementation project(path: ':poweramp_api_lib')
+    implementation libs.androidx.appcompat.resources
+    implementation libs.androidx.core.ktx
+}
