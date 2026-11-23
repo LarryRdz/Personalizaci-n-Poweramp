@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cada variante es un skin propio en el selector de Poweramp, en lugar de opciones:
+     Poweramp no guarda las opciones de skins no verificados (ver README). -->
+<skins targetBuild="1003" verification="false">
+	<skin
+		name="@string/skin_glass_dark"
+		author="@string/skin_author"
+		description="@string/skin_desc_dark"
+		style="@style/GlassDark"
+		allowNewPadding="true"
+	/>
+	<skin
+		name="@string/skin_glass_amoled"
+		author="@string/skin_author"
+		description="@string/skin_desc_amoled"
+		style="@style/GlassDark_Amoled"
+		allowNewPadding="true"
+	/>
+	<skin
+		name="@string/skin_glass_cover"
+		author="@string/skin_author"
+		description="@string/skin_desc_cover"
+		style="@style/GlassDark_Cover"
+		allowNewPadding="true"
+	/>
+</skins>

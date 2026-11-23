@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ResourceCycle, NewApi">
+
+	<!-- Base: tema oscuro nativo de Poweramp intacto. Solo cambian:
+	     colorBgNavbar  -> isla inferior (navbar + miniplayer)
+	     colorBgPrimary -> menus flotantes, popups y dialogos -->
+	<style name="GlassDark" parent="com.maxmpz.audioplayer:style/ActivityTheme_Black">
+		<item name="com.maxmpz.audioplayer:colorBgNavbar">@color/gd_navbar</item>
+		<item name="com.maxmpz.audioplayer:colorBgPrimary">@color/gd_surface</item>
+		<item name="com.maxmpz.audioplayer:navbar_elevation">0dp</item>
+		<item name="com.maxmpz.audioplayer:Navbar">@style/GlassNavbar</item>
+		<item name="com.maxmpz.audioplayer:Navbar_scene_navbar_1line_sheet">@style/GlassNavbar_scene_navbar_1line_sheet</item>
+		<item name="com.maxmpz.audioplayer:Navbar_scene_navbar_2lines">@style/GlassNavbar_scene_navbar_2lines</item>
+		<item name="com.maxmpz.audioplayer:DialogForcedStyle">@style/GlassDialogForcedStyle</item>
+	</style>
+
+	<style name="GlassDark_Amoled" parent="GlassDark">
+		<item name="com.maxmpz.audioplayer:colorBgNavbar">@color/ga_navbar</item>
+		<item name="com.maxmpz.audioplayer:colorBgPrimary">@color/ga_surface</item>
+	</style>
+
+	<!-- Caratula: fondo de listas con la caratula desenfocada mas viva + isla de cristal ahumado con grano -->
+	<style name="GlassDark_Cover" parent="GlassDark">
+		<item name="com.maxmpz.audioplayer:colorBgNavbar">@color/gc_navbar</item>
+		<item name="com.maxmpz.audioplayer:colorBgPrimary">@color/gc_surface</item>
+		<item name="com.maxmpz.audioplayer:aaEffectList">@style/GlassCover_MilkViewEffect_List</item>
+		<item name="com.maxmpz.audioplayer:aaAllowBgGradientForList">true</item>
+		<item name="com.maxmpz.audioplayer:Navbar">@style/GlassNavbarCover</item>
+		<item name="com.maxmpz.audioplayer:Navbar_scene_navbar_1line_sheet">@style/GlassNavbarCover_scene_navbar_1line_sheet</item>
+		<item name="com.maxmpz.audioplayer:Navbar_scene_navbar_2lines">@style/GlassNavbarCover_scene_navbar_2lines</item>
+	</style>
+
+	<!-- Mas brillo/saturacion que el nativo oscuro (.125 / 1.75) para que la caratula se note,
+	     con oscurecimiento para mantener legible el texto blanco -->
+	<style name="GlassCover_MilkViewEffect_List">
+		<item name="com.maxmpz.audioplayer:aaBlurIntensity">.3</item>
+		<item name="com.maxmpz.audioplayer:aaBlurSaturation">1.9</item>
+		<item name="com.maxmpz.audioplayer:aaBlurScaleSize">8</item>
+		<item name="com.maxmpz.audioplayer:aaBlurPinLight">0.12</item>
+		<item name="com.maxmpz.audioplayer:aaBlurDarken">.35</item>
+	</style>
+
+	<!-- Navbar plano -->
+	<style name="GlassNavbar" parent="com.maxmpz.audioplayer:style/Navbar">
+		<item name="android:background">@drawable/glass_navbar_bg</item>
+		<item name="android:elevation">0dp</item>
+		<item name="com.maxmpz.audioplayer:applyViewParams">true</item>
+	</style>
+	<style name="GlassNavbar_scene_navbar_1line_sheet" parent="com.maxmpz.audioplayer:style/Navbar_scene_navbar_1line_sheet">
+		<item name="android:background">@drawable/glass_navbar_bg</item>
+		<item name="android:elevation">0dp</item>
+		<item name="com.maxmpz.audioplayer:applyViewParams">true</item>
+	</style>
+	<style name="GlassNavbar_scene_navbar_2lines" parent="com.maxmpz.audioplayer:style/Navbar_scene_navbar_2lines">
+		<item name="android:background">@drawable/glass_navbar_bg</item>
+		<item name="android:elevation">0dp</item>
+		<item name="com.maxmpz.audioplayer:applyViewParams">true</item>
+	</style>
+
+	<!-- Navbar caratula (con grano) -->
+	<style name="GlassNavbarCover" parent="GlassNavbar">
+		<item name="android:background">@drawable/glass_navbar_bg_cover</item>
+	</style>
+	<style name="GlassNavbarCover_scene_navbar_1line_sheet" parent="GlassNavbar_scene_navbar_1line_sheet">
+		<item name="android:background">@drawable/glass_navbar_bg_cover</item>
+	</style>
+	<style name="GlassNavbarCover_scene_navbar_2lines" parent="GlassNavbar_scene_navbar_2lines">
+		<item name="android:background">@drawable/glass_navbar_bg_cover</item>
+	</style>
+
+	<!-- Dialogos (< Android 12: sin desenfoque, no soportado por el sistema) -->
+	<style name="GlassDialogForcedStyle" parent="com.maxmpz.audioplayer:style/Default_BaseDialogForcedStyle">
+	</style>
+</resources>

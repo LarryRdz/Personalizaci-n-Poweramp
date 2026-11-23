@@ -1,0 +1,11 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = "poweramp_glass_skin"
+include ':poweramp_api_lib'
+include ':glass_skin'

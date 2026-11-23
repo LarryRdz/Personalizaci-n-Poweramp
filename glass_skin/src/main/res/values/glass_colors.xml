@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Formato #AARRGGBB -->
+
+	<!-- Glass Dark (por defecto) -->
+	<color name="gd_navbar">#EB121212</color>   <!-- 92% -->
+	<color name="gd_surface">#F0161616</color>  <!-- 94%: menus, popups, dialogos -->
+
+	<!-- AMOLED -->
+	<color name="ga_navbar">#F5000000</color>
+	<color name="ga_surface">#F7050505</color>
+
+	<!-- Caratula: negro ahumado (sin gris) para que el tono de la caratula desenfocada tina la isla -->
+	<color name="gc_navbar">#C7000000</color>   <!-- 78% -->
+	<color name="gc_surface">#D90A0A0A</color>  <!-- 85% -->
+</resources>
