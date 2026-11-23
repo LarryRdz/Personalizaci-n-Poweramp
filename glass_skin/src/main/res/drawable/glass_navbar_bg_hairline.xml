@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Isla inferior: superficie plana + linea de contorno muy fina (sin degradados) -->
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-	<corners android:radius="?com.maxmpz.audioplayer:corners_navbar"/>
-	<solid android:color="?com.maxmpz.audioplayer:colorBgNavbar"/>
-	<stroke android:width="0.75dp" android:color="@color/glass_hairline"/>
-</shape>

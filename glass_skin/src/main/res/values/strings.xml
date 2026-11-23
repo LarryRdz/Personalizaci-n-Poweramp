@@ -116,12 +116,10 @@
 	<string name="verification_in_process">Verification in process...</string>
 
 	<string name="skin_glass_dark">Glass Dark</string>
-	<string name="skin_glass_translucent">Glass Dark · Translúcido</string>
 	<string name="skin_glass_amoled">Glass Dark · AMOLED</string>
-	<string name="skin_glass_outline">Glass Dark · Contorno</string>
+	<string name="skin_glass_cover">Glass Dark · Carátula</string>
 	<string name="skin_desc_dark">Tema oscuro nativo con isla inferior, menús y diálogos en cristal oscuro plano</string>
-	<string name="skin_desc_translucent">Como Glass Dark, con algo más de transparencia</string>
 	<string name="skin_desc_amoled">Superficies en negro puro, ideal para pantallas OLED</string>
-	<string name="skin_desc_outline">Glass Dark con una línea de contorno muy fina en la isla inferior</string>
+	<string name="skin_desc_cover">Fondo con la carátula desenfocada y la isla inferior en cristal ahumado con grano sutil</string>
 	<string name="open_theme_picker">Elegir skin en Poweramp</string>
 </resources>

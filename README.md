@@ -10,9 +10,9 @@ Solo cambia:
 
 Variantes (cada una es un skin propio en Poweramp → Ajustes → Tema):
 - **Glass Dark**: oscuro plano al 92%, sin bordes.
-- **Glass Dark · Translúcido**: 82%.
 - **Glass Dark · AMOLED**: negro puro.
-- **Glass Dark · Contorno**: como Glass Dark con una línea muy fina.
+- **Glass Dark · Carátula**: fondo de listas con la carátula desenfocada más viva e isla de cristal
+  ahumado (78%) con grano sutil, teñida por la carátula que queda detrás.
 
 ## Por qué no hay opciones dentro del skin
 Poweramp (build 1026+) trata como **no verificado** a todo skin cuyo certificado no esté en su lista blanca:
